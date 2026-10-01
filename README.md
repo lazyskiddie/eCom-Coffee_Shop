@@ -54,65 +54,6 @@ The application follows a standard Spring Boot MVC pattern:
 - Login page is configured for authenticated access
 - Default admin user is created automatically on startup if not present
 
-## Repository Structure
-
-```text
-E_commerce/
-├── .mvn/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/example/E_commerce/
-│   │   │       ├── Admin/
-│   │   │       ├── AdminEntity.java
-│   │   │       ├── Coffee.java
-│   │   │       ├── ECommerceApplication.java
-│   │   │       ├── MyConfiguration.java
-│   │   │       ├── MySecurityConfg.java
-│   │   │       └── adminConfiguratuion.java
-│   │   ├── resources/
-│   │   │   └── application.properties
-│   │   └── webapp/
-│   │       ├── WEB-INF/view/
-│   │       ├── main.js
-│   │       └── style.css
-│   └── test/
-├── .gitignore
-├── .gitattributes
-├── LICENSE
-├── README.md
-├── pom.xml
-├── mvnw
-├── mvnw.cmd
-└── .mvn/
-```
-
-## Configuration
-
-Application settings are stored in `src/main/resources/application.properties`:
-
-```properties
-spring.application.name=E-commerce
-
-spring.datasource.url = jdbc:mysql://localhost:3306/jdbclearning
-spring.datasource.username = root
-spring.datasource.password = Singh0208A
-spring.datasource.driver-class-name = com.mysql.cj.jdbc.Driver
-
-spring.jpa.hibernate.ddl-auto = update
-
-spring.mvc.view.prefix = /WEB-INF/view/
-spring.mvc.view.suffix = .jsp
-```
-
-### Database setup
-
-This project expects a MySQL database named `jdbclearning`.
-
-```sql
-CREATE DATABASE jdbclearning;
-```
-
 If your local database credentials differ, update the values in `application.properties` before running the app.
 
 ## Default Admin Credentials
@@ -142,7 +83,7 @@ cd eCom-Coffee_Shop
 2. Create the MySQL database:
 
 ```sql
-CREATE DATABASE jdbclearning;
+CREATE DATABASE database;
 ```
 
 3. Update your database settings if necessary in `src/main/resources/application.properties`.
